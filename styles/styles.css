@@ -1,0 +1,409 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --yellow: #ffe17f;
+  --font-title: "Raleway", sans-serif; /*var(--yellow)*/
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-style: normal;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  min-width: 1440px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  background-color: #ffffff;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-header {
+  background-color: transparent;
+  width: 1160px;
+  margin: 0 auto;
+  color: #000000;
+}
+
+.search-form {
+  display: flex;
+}
+
+.input {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.search-input {
+  width: 359px;
+  height: 40px;
+  border: 2px solid #000000;
+  border-radius: 50px 0 0 50px;
+  padding: 10px 10px 10px 48px;
+}
+
+.button {
+  background-color: #ffffff;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+  color: #000000;
+}
+
+.search-button {
+  width: 160px;
+  height: 40px;
+  border: 2px solid #000000;
+  border-left: 0;
+  border-radius: 0 50px 50px 0;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.menu-button {
+  font-size: 18px;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.user-office-link {
+  color: #000000;
+}
+
+.cart-counter {
+  font-size: 14px;
+  line-height: normal;
+}
+
+.menu-item-link {
+  font-family: var(--font-title);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3.6px;
+  color: #000000;
+}
+
+.main-index {
+  flex-grow: 1;
+}
+
+.title {
+  font-family: var(--font-title);
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.link {
+  font-family: var(--font-title);
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.feature-meaning {
+  font-size: 36px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.feature-name {
+  font-size: 16px;
+}
+
+.assortment-link {
+  font-family: var(--font-title);
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.advantage-button {
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.advantages-item-active .advantage-button {
+  color: var(--yellow);
+}
+
+.rare-commodity-button {
+  font-family: var(--font-title);
+  font-size: 20px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  background-color: #f0f0f0;
+}
+
+.about-item b {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  color: #000000;
+}
+
+.contacts-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.contacts-address {
+  font-style: normal;
+}
+
+.contacts-tel {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-style: normal;
+  color: #444444;
+}
+
+.subscribe-input {
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.subscribe-button {
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+}
+
+.main-footer {
+  background-color: #444444;
+}
+
+.footer-address-contacts {
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.footer-menu-item-link {
+  color: #ffffff;
+}
+
+.footer-contacts-tel {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.social-item {
+  list-style: none;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*catalog*/
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+}
+
+.filter-title,
+.sort-title {
+  font-family: var(--font-title);
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.catalof-filter-title {
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+}
+
+.cost-value {
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.catalog-span {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.button-filter {
+  font-family: var(--font-title);
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.catalog-select {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card-title {
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: -0.36px;
+  color: #000000;
+}
+
+.card-cost {
+  line-height: normal;
+  color: #444444;
+}
+
+.button-download {
+  font-family: var(--font-title);
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.pagination-button {
+  font-family: var(--font-title);
+  font-size: 18px;
+  line-height: normal;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination-link {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 0.3;
+  color: #444444;
+  text-decoration: none;
+}
+
+.pagination-link-active {
+  opacity: 0.6;
+}
