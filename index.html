@@ -37,9 +37,9 @@
               <a class="button menu-button cart-button" href="#"><span class="cart-counter">2</span>Корзина</a>
             </li>
           </ul>
-          <nav class="nav-header">
-            <ul class="menu-list">
-              <li class="menu-item has-submenu">
+
+            <ul class="nav-menu-list">
+              <li class="nav-menu-item has-submenu">
                 <a class="menu-item-link" href="#">Каталог товаров</a>
                 <!--      <ul class="submenu-list">
                 <li class="submenu-item">
@@ -62,17 +62,17 @@
                 </li>
               </ul>    -->
               </li>
-              <li class="menu-item">
+              <li class="nav-menu-item">
                 <a class="menu-item-link" href="#">Доставка</a>
               </li>
-              <li class="menu-item">
+              <li class="nav-menu-item">
                 <a class="menu-item-link" href="#">Гарантия</a>
               </li>
-              <li class="menu-item">
+              <li class="nav-menu-item">
                 <a class="menu-item-link" href="#">Контакты</a>
               </li>
             </ul>
-          </nav>
+
         </div>
       </header>
 
@@ -84,11 +84,11 @@
               <li class="slider-item slider-item-active">
                 <h2 class="visually-hidden">Квадрокоптер.</h2>
                 <div class="image-wrapper">
-                  <button class="preview-button" type="button">
+                  <button class="slider-button previous-button" type="button">
                     <span class="visually-hidden">Предыдущий слайд.</span>
                   </button>
                   <img src="./images/copter.png" width="560" height="560" alt="Изображение квадрокоптера.">
-                  <button class="next-button" type="button">
+                  <button class="slider-button next-button" type="button">
                     <span class="visually-hidden">Следующий слайд.</span>
                   </button>
                 </div>
@@ -112,11 +112,11 @@
               <!--      <li class="slider-item">
               <h2 class="visually-hidden">Фитнес-браслет.</h2>
               <div class="image-wrapper">
-                <button class="preview-button" type="button">
+                <button class="slider-button previous-button" type="button">
                   <span class="visually-hidden">Предыдущий слайд.</span>
                 </button>
                 <img src="./images/fitness-bracelet.png" width="560" height="560" alt="Изображение фитнес-браслета.">
-                <button class="next-button" type="button">
+                <button class="slider-button next-button" type="button">
                   <span class="visually-hidden">Следующий слайд.</span>
                 </button>
               </div>
@@ -136,11 +136,11 @@
             <li class="slider-item">
               <h2 class="visually-hidden">Селфи-палка.</h2>
               <div class="image-wrapper">
-                <button class="preview-button" type="button">
+                <button class="slider-button previous-button" type="button">
                   <span class="visually-hidden">Предыдущий слайд.</span>
                 </button>
                 <img src="./images/selfie-stick.png" width="560" height="560" alt="Изображения селфи-палки.">
-                <button class="next-button" type="button">
+                <button class="slider-button next-button" type="button">
                   <span class="visually-hidden">Следующий слайд.</span>
                 </button>
               </div>
@@ -194,7 +194,7 @@
                 <a class="assortment-link" href="#">Виртуальная реальность</a>
               </li>
               <li class="assortment-item">
-                <a class="assortment-link" href="#">Моноподы для селфи</a>
+                <a class="assortment-link" href="#">Моноподы для&nbsp;селфи</a>
               </li>
               <li class="assortment-item">
                 <a class="assortment-link" href="#">Экшн-камеры</a>
@@ -216,29 +216,29 @@
           <div class="advantages-container">
             <h2 class="visually-hidden">Преимущества.</h2>
             <ul class="advantages-list">
-              <li class="advantages-item advantages-item-active">
-                <a class="button advantage-button delivery-button" href="#tab-01">Доставка</a>
+              <li class="advantages-item advantages-delivery advantages-item-active">
+                <a class="link advantage-button delivery-button" href="#tab-01">Доставка</a>
               </li>
-              <li class="advantages-item">
-                <a class="button advantage-button guarantee-button" href="#tab-02">Гарантия</a>
+              <li class="advantages-item advantages-guarantee">
+                <a class="link advantage-button guarantee-button" href="#tab-02">Гарантия</a>
               </li>
-              <li class="advantages-item">
-                <a class="button advantage-button credit-button" href="#tab-03">Кредит</a>
+              <li class="advantages-item advantages-credit">
+                <a class="link advantage-button credit-button" href="#tab-03">Кредит</a>
               </li>
             </ul>
             <ul class="advatages-description-list">
-              <li class="advantages-description-item advantages-description-item-active" id="tab-01">
+              <li class="advantages-description-item advantages-description-delivery advantages-description-item-active" id="tab-01">
                 <h3 class="title advantages-title">Доставка</h3>
                 <p class="advantages-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
                   совершенно
                   бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
               </li>
-              <!--       <li class="advantages-description-item" id="tab-02">
+              <!--       <li class="advantages-description-item advantages-description-gurantee" id="tab-02">
               <h3 class="title advantages-title">Гарантия</h3>
               <p class="advantages-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не
                 переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </li>
-            <li class="advantages-description-item" id="tab-03">
+            <li class="advantages-description-item advantages-description-credit" id="tab-03">
               <h3 class="title advantages-title">Кредит</h3>
               <p class="advantages-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для
                 вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
@@ -295,7 +295,7 @@
           <div class="subscribe-container">
             <h2 class="title subscribe-title">Подпишитесь на рассылку</h2>
             <p class="subscribe-description">Еженедельный дайджест с обзорами новинок,
-              длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+              длительными&nbsp;тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="e-mail">Введите Ваш e-mail.</label>
               <input class="input subscribe-input" type="email" id="e-mail" name="e-mail" placeholder="Ваш e-mail">
