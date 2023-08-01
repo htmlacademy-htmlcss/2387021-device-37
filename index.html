@@ -23,25 +23,26 @@
           </a>
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="search-site">Поиск по сайту.</label>
-            <input class="input search-input" type="text" id="search-site" name="search-site" placeholder="Поиск по сайту">
+            <input class="input search-input" type="text" id="search-site" name="search-site"
+              placeholder="Поиск по сайту">
             <button class="button search-button" type="submit">Найти</button>
           </form>
           <ul class="menu-list">
-            <li class="menu-item">
+            <li class="menu-item menu-item-login">
               <a class="button menu-button login-button" href="#">Войти</a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item menu-item-compare">
               <a class="button menu-button compare-button" href="#">Сравнить</a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item menu-item-cart">
               <a class="button menu-button cart-button" href="#"><span class="cart-counter">2</span>Корзина</a>
             </li>
           </ul>
 
-            <ul class="nav-menu-list">
-              <li class="nav-menu-item has-submenu">
-                <a class="menu-item-link" href="#">Каталог товаров</a>
-                <!--      <ul class="submenu-list">
+          <ul class="nav-menu-list">
+            <li class="nav-menu-item has-submenu">
+              <a class="menu-item-link" href="#">Каталог товаров</a>
+              <!--      <ul class="submenu-list">
                 <li class="submenu-item">
                   <a class="cubmenu-item-link" href="#">Виртуальная реальность</a>
                 </li>
@@ -61,18 +62,17 @@
                   <a class="cubmenu-item-link" href="#">Квадрокоптеры</a>
                 </li>
               </ul>    -->
-              </li>
-              <li class="nav-menu-item">
-                <a class="menu-item-link" href="#">Доставка</a>
-              </li>
-              <li class="nav-menu-item">
-                <a class="menu-item-link" href="#">Гарантия</a>
-              </li>
-              <li class="nav-menu-item">
-                <a class="menu-item-link" href="#">Контакты</a>
-              </li>
-            </ul>
-
+            </li>
+            <li class="nav-menu-item">
+              <a class="menu-item-link" href="#">Доставка</a>
+            </li>
+            <li class="nav-menu-item">
+              <a class="menu-item-link" href="#">Гарантия</a>
+            </li>
+            <li class="nav-menu-item">
+              <a class="menu-item-link" href="#">Контакты</a>
+            </li>
+          </ul>
         </div>
       </header>
 
@@ -191,22 +191,34 @@
             <h2 class="visually-hidden">Ассортимент товаров.</h2>
             <ul class="assortment-list">
               <li class="assortment-item">
-                <a class="assortment-link" href="#">Виртуальная реальность</a>
+                <a class="assortment-link assortment-vr" href="#">
+                  <p class="assortment-title">Виртуальная реальность</p>
+                </a>
               </li>
               <li class="assortment-item">
-                <a class="assortment-link" href="#">Моноподы для&nbsp;селфи</a>
+                <a class="assortment-link assortment-selfie" href="#">
+                  <p class="assortment-title">Моноподы для&nbsp;селфи</p>
+                </a>
               </li>
               <li class="assortment-item">
-                <a class="assortment-link" href="#">Экшн-камеры</a>
+                <a class="assortment-link assortment-camera" href="#">
+                  <p class="assortment-title">Экшн-камеры</p>
+                </a>
               </li>
               <li class="assortment-item">
-                <a class="assortment-link" href="#">Фитнес-браслеты</a>
+                <a class="assortment-link assortment-bracelet" href="#">
+                  <p class="assortment-title">Фитнес-браслеты</p>
+                </a>
               </li>
               <li class="assortment-item">
-                <a class="assortment-link" href="#">Умные часы</a>
+                <a class="assortment-link assortment-watch" href="#">
+                  <p class="assortment-title">Умные часы</p>
+                </a>
               </li>
               <li class="assortment-item">
-                <a class="assortment-link" href="#">Квадрокоптеры</a>
+                <a class="assortment-link assortment-copter" href="#">
+                  <p class="assortment-title">Квадрокоптеры</p>
+                </a>
               </li>
             </ul>
           </div>
@@ -227,11 +239,11 @@
               </li>
             </ul>
             <ul class="advatages-description-list">
-              <li class="advantages-description-item advantages-description-delivery advantages-description-item-active" id="tab-01">
+              <li class="advantages-description-item advantages-description-delivery advantages-description-item-active"
+                id="tab-01">
                 <h3 class="title advantages-title">Доставка</h3>
-                <p class="advantages-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-                  совершенно
-                  бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+                <p class="advantages-description">Мы с удовольствием доставим ваш товар прямо к&nbsp;вашему подъезду
+                  совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
               </li>
               <!--       <li class="advantages-description-item advantages-description-gurantee" id="tab-02">
               <h3 class="title advantages-title">Гарантия</h3>
@@ -277,7 +289,7 @@
             </div>
             <div class="contacts">
               <h2 class="title contacts-title">Контакты</h2>
-              <p class="contacts-description">Вы можете забрать товар сами, заехав в наш офис.
+              <p class="contacts-description">Вы можете забрать товар сами, заехав в наш офис.<br>
                 Заодно сможете проверить работоспособность покупки. </p>
               <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
               <address class="contacts-address">
