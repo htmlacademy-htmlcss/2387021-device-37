@@ -10,7 +10,7 @@
 
   <body>
     <div class="main-container">
-      <header class="main-header" id="main-header">
+      <header class="main-header catalog-header" id="main-header">
         <div class="header-container">
           <a class="logo-link" href="./index.html">
             <svg role="img" aria-label="Логотип магазина." width="145" height="36" viewBox="0 0 145 36" fill="none"
@@ -39,30 +39,31 @@
               <a class="button menu-button cart-button" href="#"><span class="cart-counter">2</span>Корзина</a>
             </li>
           </ul>
-
+          <nav class="nav-menu">
             <ul class="nav-menu-list">
-              <li class="nav-menu-item has-submenu">
+              <li class="nav-menu-item nav-menu-item-catalog">
                 <a class="menu-item-link" href="#">Каталог товаров</a>
-                <!--  <ul class="submenu-list">
+                <button class="menu-item-button" type="button"></button>
+                <ul class="submenu-list">
                 <li class="submenu-item">
-                  <a class="cubmenu-item-link" href="#">Виртуальная реальность</a>
+                  <a class="submenu-item-link" href="#">Виртуальная реальность</a>
                 </li>
                 <li class="submenu-item">
-                  <a class="cubmenu-item-link" href="#">Моноподы для селфи</a>
+                  <a class="submenu-item-link" href="#">Моноподы для селфи</a>
                 </li>
                 <li class="submenu-item">
-                  <a class="cubmenu-item-link" href="#">Экшн-камеры</a>
+                  <a class="submenu-item-link" href="#">Экшн-камеры</a>
                 </li>
                 <li class="submenu-item">
-                  <a class="cubmenu-item-link" href="#">Фитнес-браслеты</a>
+                  <a class="submenu-item-link" href="#">Фитнес-браслеты</a>
                 </li>
                 <li class="submenu-item">
-                  <a class="cubmenu-item-link" href="#">Умные часы</a>
+                  <a class="submenu-item-link" href="#">Умные часы</a>
                 </li>
                 <li class="submenu-item">
-                  <a class="cubmenu-item-link" href="#">Квадрокоптеры</a>
+                  <a class="submenu-item-link" href="#">Квадрокоптеры</a>
                 </li>
-              </ul>      -->
+              </ul>
               </li>
               <li class="nav-menu-item">
                 <a class="menu-item-link" href="#">Доставка</a>
@@ -74,7 +75,7 @@
                 <a class="menu-item-link" href="#">Контакты</a>
               </li>
             </ul>
-
+          </nav>
         </div>
       </header>
 
@@ -123,35 +124,30 @@
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
                         <input class="visually-hidden catalog-input" type="checkbox" name="color" value="black" checked>
-                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Черный</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
                         <input class="visually-hidden catalog-input" type="checkbox" name="color" value="white" checked>
-                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Белый</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
                         <input class="visually-hidden catalog-input" type="checkbox" name="color" value="blue">
-                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Синий</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
                         <input class="visually-hidden catalog-input" type="checkbox" name="color" value="red">
-                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Красный</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
                         <input class="visually-hidden catalog-input" type="checkbox" name="color" value="pink">
-                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Розовый</span>
                       </label>
                     </li>
@@ -161,16 +157,14 @@
                   <legend class="catalog-filter-title">Bluetooth</legend>
                   <ul class="catalog-filter-list bluetooth-list">
                     <li class="catalog-filter-item">
-                      <label class="catalog-label">
+                      <label class="catalog-label catalog-label-radio">
                         <input class="visually-hidden catalog-input" type="radio" name="bluetooth" value="with" checked>
-                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Есть</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
-                      <label class="catalog-label">
+                      <label class="catalog-label catalog-label-radio">
                         <input class="visually-hidden catalog-input" type="radio" name="bluetooth" value="without">
-                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Нет</span>
                       </label>
                     </li>
@@ -187,8 +181,12 @@
                   <option value="cheap">Сначала дешевые</option>
                   <option value="expensive">Сначала дорогие</option>
                 </select>
-                <button class="sort-button up-button" type="button"></button>
-                <button class="sort-button down-button" type="button"></button>
+                <button class="sort-button up-button" type="button">
+                  <span class="visually-hidden">По возрастанию</span>
+                </button>
+                <button class="sort-button down-button" type="button">
+                  <span class="visually-hidden">По убыванию</span>
+                </button>
               </div>
               <ul class="catalog-list">
                 <li class="catalog-item">
@@ -226,7 +224,6 @@
               </ul>
               <a class="button button-download" href="#">Загрузить еще</a>
 
-              <div class="pagination-catalog">
                 <ol class="pagination-list">
                   <li class="pagination-item pagination-item-back">
                     <button class="pagination-button pagination-back-button" type="button">Назад</button>
@@ -250,7 +247,6 @@
                     <button class="pagination-button pagination-forward-button" type="button">Вперёд</button>
                   </li>
                 </ol>
-              </div>
             </div>
           </div>
         </section>
@@ -294,24 +290,24 @@
             <h3 class="visually-hidden">Социальные сети.</h3>
             <ul class="social-list">
               <li class="social-item">
-                <a class="social-link" href="https://t.me/htmlacademy">
+                <a class="social-link" href="https://t.me/htmlacademy" rel="noopener">
                   <img src="./images/logo/logo-telegram.svg" width="14" height="12" alt="Телеграм.">
                 </a>
               </li>
               <li class="social-item">
-                <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
+                <a class="social-link" href="https://www.youtube.com/user/htmlacademyru" rel="noopener">
                   <img src="./images/logo/logo-youtube.svg" width="16" height="11" alt="Ютуб.">
                 </a>
               </li>
               <li class="social-item">
-                <a class="social-link" href="https://twitter.com/htmlacademy_ru">
+                <a class="social-link" href="https://twitter.com/htmlacademy_ru" rel="noopener">
                   <img src="./images/logo/logo-twitter.svg" width="15" height="14" alt="Твиттер.">
                 </a>
               </li>
             </ul>
           </div>
           <div class="copyright">
-            <a class="copyright-link" href="https://htmlacademy.ru/">
+            <a class="copyright-link" href="https://htmlacademy.ru/" rel="noopener">
               <svg role="img" aria-label="Логотип HTML Academy." width="115" height="33" viewBox="0 0 115 33"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -323,6 +319,7 @@
         </div>
       </footer>
     </div>
+    <script src="./scripts/script-catalog.js"></script>
   </body>
 
 </html>
