@@ -6,6 +6,8 @@
 
 :root {
   --yellow: #ffe17f;
+  --purple: #af4fff;
+  --red: #ff3d3d;
   --font-title: "Raleway", sans-serif;
 }
 
@@ -109,6 +111,10 @@ img {
   font-size: 16px;
   line-height: 20px;
   color: #000000;
+}
+
+.input::placeholder {
+  opacity: 0.3;
 }
 
 .search-input {
@@ -280,10 +286,6 @@ img {
   margin-right: auto;
 }
 
-.nav-menu-item-catalog .menu-item-link {
-  position: relative;
-}
-
 .has-submenu .submenu-list {
   display: flex;
 }
@@ -335,6 +337,7 @@ img {
 .nav-menu-item-catalog .menu-item-link {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .menu-item-button {
@@ -510,6 +513,30 @@ img {
   width: 100%;
   height: 8px;
   background-color: var(--yellow);
+  transition: 0.3s ease;
+}
+
+.link:hover::before {
+  height: 40px;
+  transition: 0.3s ease;
+}
+
+.link:focus {
+  outline: 2px solid var(--purple);
+}
+
+.link:active::before {
+  height: 40px;
+  background-color: #ffcc33;
+}
+
+.link:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.link:disabled::before {
+  height: 8px;
 }
 
 .more-link {
@@ -815,7 +842,23 @@ img {
   background-image: url("../images/icons/icon-i.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #dcdcdc;
+  background-color: rgba(220, 220, 220, 0.5);
+}
+
+.rare-commodity-button:hover::before {
+  background-color: #ffc700;
+}
+
+.rare-commodity-button:hover::after {
+  background-image: url("../images/icons/icon-i-black.svg");
+}
+
+.rare-commodity-button:focus {
+  outline: 2px solid var(--purple);
+}
+
+.rare-commodity-button:active {
+  opacity: 0.3;
 }
 
 .about {
@@ -1598,4 +1641,291 @@ img {
 
 .pagination-link-active {
   opacity: 0.6;
+}
+
+/*Модальное окно (закрывается и открывается по кнопке)*/
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 5;
+}
+
+.modal-closed {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  width: 920px;
+  min-height: 568px;
+  margin: auto;
+  padding: 72px 80px;
+  background-color: #ffffff;
+  border: 10px solid #000000;
+  box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-button {
+  position: absolute;
+  content: "";
+  top: 84px;
+  right: 80px;
+  width: 26px;
+  height: 26px;
+  background-image: url("../images/decor/modal-cross.svg");
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  opacity: 0.6;
+}
+
+.modal-close-button:focus {
+  opacity: 1;
+  outline: 2px solid var(--purple);
+}
+
+.modal-close-button:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.modal-title {
+  margin-bottom: 42px;
+}
+
+.modal-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 760px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 42px;
+}
+
+.field-group:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.modal-label {
+  color: #000000;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.36px;
+  margin-bottom: 14px;
+}
+
+.field-help {
+  color: #000000;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.field-error {
+  color: var(--red)
+}
+
+.modal-input {
+  color: #000000;
+  font-size: 16px;
+  line-height: 20px;
+  width: 360px;
+  height: 60px;
+  padding: 20px 40px 20px 20px;
+  background-color: #f0f0f0;
+  border: none;
+}
+
+.modal-input:hover {
+  background-color: #dcdcdc;
+}
+
+.modal-input:focus {
+  outline: 2px solid var(--purple);
+}
+
+.modal-input:invalid {
+  outline: 2px solid var(--red);
+}
+
+.modal-input:disabled {
+  outline: none;
+  opacity: 0.3;
+}
+
+.modal-input:disabled:hover {
+  background-color: #f0f0f0;
+}
+
+.name-input {
+  background-image: url("../images/decor/modal-user.svg");
+  background-repeat: no-repeat;
+  background-position: top 24px right 20px;
+}
+
+.email-input {
+  background-image: url("../images/decor/modal-mail.svg");
+  background-repeat: no-repeat;
+  background-position: top 24px right 20px;
+}
+
+.delivery-input {
+  width: 540px;
+}
+
+.tooltip-wrapper {
+  position: relative;
+  width: 180px;
+}
+
+.tooltip-button {
+  position: relative;
+  top: -6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background-image: url("../images/decor/modal-tooltip.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--yellow);
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.tooltip-text {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: -19px;
+  width: 200px;
+  height: 160px;
+  padding: 19px;
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 20px;
+  z-index: 3;
+}
+
+.tooltip-text::before {
+  position: absolute;
+  content: "";
+  top: -6px;
+  right: 40px;
+  width: 14px;
+  height: 6px;
+  background-image: url("../images/decor/tooltip-triangle.svg");
+  background-repeat: no-repeat;
+}
+
+.tooltip-button:hover + .tooltip-text,
+.tooltip-button:focus + .tooltip-text {
+  display: block;
+}
+
+.input-wrapper {
+  display: flex;
+}
+
+.quantity-button {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+.quantity-button::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.plus-button::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  width: 16px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.quantity-button:hover {
+  background-color: #ebebeb;
+}
+
+.quantity-button:hover::before,
+.quantity-button:hover::after,
+.quantity-button:active::before,
+.quantity-button:active::after {
+  background-color: #969696;
+}
+
+.quantity-button:focus {
+  background-color: #f0f0f0;
+  outline: 2px solid var(--purple);
+}
+
+.quantity-button:active {
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+.quantity-button:disabled {
+  background-color: #fbfbfb;
+  cursor: default;
+}
+
+.quantity-button:disabled::before,
+.quantity-button:disabled::after {
+  background-color: #e5e5e5;
+}
+
+.quantity-button:disabled:hover::before,
+.quantity-button:disabled:hover::after {
+  background-color: #e5e5e5;
+}
+
+.quantity-input {
+  width: 60px;
+  height: 60px;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.quantity-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.send-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
 }
