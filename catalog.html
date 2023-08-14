@@ -38,6 +38,39 @@
             </li>
             <li class="menu-item menu-item-cart">
               <a class="button menu-button cart-button" href="#"><span class="cart-counter">2</span>Корзина</a>
+              <div class="popover popover-cart popover-closed">
+                <div class="popover-content">
+                  <ul class="popover-cart-list">
+                    <li class="popover-cart-item">
+                      <a class="popover-cart-link" href="#">
+                        <img src="./images/catalog/selfie-stick-1.jpg" alt="Селфи палка для любителей" width="39"
+                          height="43">
+                        <p class="popover-text">Любительская селфи-палка</p>
+                      </a>
+                      <button class="delete-popover-button" type="button">
+                        <span class="visually-hidden">Удалить из корзины.</span>
+                      </button>
+                    </li>
+                    <li class="popover-cart-item">
+                      <a class="popover-cart-link" href="#">
+                        <img src="./images/catalog/selfie-stick-2.jpg" alt="Селфи палка для профессионалов" width="39"
+                          height="43">
+                        <p class="popover-text">Профессиональная селфи-палка</p>
+                      </a>
+                      <button class="delete-popover-button" type="button">
+                        <span class="visually-hidden">Удалить из корзины.</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="popover-total">
+                    <p class="popover-text popover-product">Товаров:<span class="popover-text popover-amount"> 2</span>
+                    </p>
+                    <p class="popover-text popover-sum">Сумма:<span class="popover-text popover-amount"> 2000 ₽</span>
+                    </p>
+                  </div>
+                  <a class="button button-open-cart" href="#">Открыть корзину</a>
+                </div>
+              </div>
             </li>
           </ul>
           <nav class="nav-menu">
@@ -108,14 +141,12 @@
                   <legend class="catalog-filter-title">Стоимость</legend>
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; width: 119px;">
-                      <button class="range-toggle toggle-min" type="button">
-                        <span class="visually-hidden">Изменить минимальную цену.</span>
-                        <span class="cost-value cost-min">от 0</span>
-                      </button>
-                      <button class="range-toggle toggle-max" type="button">
-                        <span class="visually-hidden">Изменить максимальную цену.</span>
-                        <span class="cost-value cost-max">до 5000</span>
-                      </button>
+                      <button class="range-toggle toggle-min" type="button"></button>
+                      <label class="visually-hidden">Изменить минимальную цену.</label>
+                      <input class="cost-value cost-min" type="text" placeholder="от 0">
+                      <button class="range-toggle toggle-max" type="button"></button>
+                      <label class="visually-hidden">Изменить максимальную цену.</label>
+                      <input class="cost-value cost-max" type="text" placeholder="до 5000">
                     </div>
                   </div>
                 </fieldset>
@@ -125,30 +156,35 @@
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
                         <input class="visually-hidden catalog-input" type="checkbox" name="color" value="black" checked>
+                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Черный</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
                         <input class="visually-hidden catalog-input" type="checkbox" name="color" value="white" checked>
+                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Белый</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
                         <input class="visually-hidden catalog-input" type="checkbox" name="color" value="blue">
+                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Синий</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
                         <input class="visually-hidden catalog-input" type="checkbox" name="color" value="red">
+                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Красный</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
                         <input class="visually-hidden catalog-input" type="checkbox" name="color" value="pink">
+                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Розовый</span>
                       </label>
                     </li>
@@ -160,12 +196,14 @@
                     <li class="catalog-filter-item">
                       <label class="catalog-label catalog-label-radio">
                         <input class="visually-hidden catalog-input" type="radio" name="bluetooth" value="with" checked>
+                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Есть</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label catalog-label-radio">
                         <input class="visually-hidden catalog-input" type="radio" name="bluetooth" value="without">
+                        <span class="catalog-mark"></span>
                         <span class="catalog-span">Нет</span>
                       </label>
                     </li>
@@ -304,7 +342,7 @@
                         fill="#444" />
                     </g>
                     <defs>
-                      <clipPath id="a">
+                      <clipPath>
                         <path fill="#fff" d="M0 0h14v12H0z" />
                       </clipPath>
                     </defs>
@@ -321,7 +359,7 @@
                         fill="#444" />
                     </g>
                     <defs>
-                      <clipPath id="a">
+                      <clipPath>
                         <path fill="#fff" d="M0 0h16v11H0z" />
                       </clipPath>
                     </defs>
@@ -354,6 +392,7 @@
       </footer>
     </div>
     <script src="./scripts/script-catalog.js"></script>
+    <script src="./scripts/scipt-popover.js"></script>
   </body>
 
 </html>

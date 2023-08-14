@@ -75,7 +75,7 @@
           <nav class="nav-menu">
             <ul class="nav-menu-list">
               <li class="nav-menu-item nav-menu-item-catalog">
-                <a class="menu-item-link" href="#">Каталог товаров</a>
+                <a class="menu-item-link menu-item-catalog-link" href="#">Каталог товаров</a>
                 <button class="menu-item-button" type="button"></button>
                 <ul class="submenu-list">
                   <li class="submenu-item">
@@ -123,7 +123,7 @@
                   <button class="slider-button previous-button" type="button">
                     <span class="visually-hidden">Предыдущий слайд.</span>
                   </button>
-                  <img src="./images/copter.png" width="560" height="560" alt="Изображение квадрокоптера.">
+                  <img class="slider-image" src="./images/copter.png" width="560" height="560" alt="Изображение квадрокоптера.">
                   <button class="slider-button next-button" type="button">
                     <span class="visually-hidden">Следующий слайд.</span>
                   </button>
@@ -151,7 +151,7 @@
                   <button class="slider-button previous-button" type="button">
                     <span class="visually-hidden">Предыдущий слайд.</span>
                   </button>
-                  <img src="./images/fitness-bracelet.png" width="560" height="560" alt="Изображение фитнес-браслета.">
+                  <img class="slider-image" src="./images/fitness-bracelet.png" width="560" height="560" alt="Изображение фитнес-браслета.">
                   <button class="slider-button next-button" type="button">
                     <span class="visually-hidden">Следующий слайд.</span>
                   </button>
@@ -175,7 +175,7 @@
                   <button class="slider-button previous-button" type="button">
                     <span class="visually-hidden">Предыдущий слайд.</span>
                   </button>
-                  <img src="./images/selfie-stick.png" width="560" height="560" alt="Изображения селфи-палки.">
+                  <img class="slider-image" src="./images/selfie-stick.png" width="560" height="560" alt="Изображения селфи-палки.">
                   <button class="slider-button next-button" type="button">
                     <span class="visually-hidden">Следующий слайд.</span>
                   </button>
@@ -403,7 +403,7 @@
                         fill="#444" />
                     </g>
                     <defs>
-                      <clipPath id="a">
+                      <clipPath>
                         <path fill="#fff" d="M0 0h14v12H0z" />
                       </clipPath>
                     </defs>
@@ -420,7 +420,7 @@
                         fill="#444" />
                     </g>
                     <defs>
-                      <clipPath id="a">
+                      <clipPath>
                         <path fill="#fff" d="M0 0h16v11H0z" />
                       </clipPath>
                     </defs>
@@ -510,6 +510,7 @@
     <script src="./scripts/script-modal.js"></script>
     <script src="./scripts/scipt-popover.js"></script>
     <script src="./scripts/script-advatages.js"></script>
+    <script src="./scripts/script-slider.js"></script>
   </body>
 
 </html>

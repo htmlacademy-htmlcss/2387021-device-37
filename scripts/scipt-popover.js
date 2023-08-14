@@ -3,5 +3,5 @@ let popover = document.querySelector('.popover-cart');
 
 cartButton.onclick = function (evt) {
   evt.preventDefault();
-  popover.classList.remove('popover-closed');
+  popover.classList.toggle('popover-closed');
 };
