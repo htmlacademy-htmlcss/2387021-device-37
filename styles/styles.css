@@ -197,6 +197,7 @@ img {
   background-color: transparent;
   padding: 0;
   transition: 0.3s ease;
+  z-index: 3;
 }
 
 .search-button:hover {
@@ -266,6 +267,10 @@ img {
   opacity: 1;
 }
 
+.menu-item-catalog-link:hover + .menu-item-button {
+  opacity: 1;
+}
+
 .menu-button:focus,
 .menu-item-link:focus,
 .submenu-item-link:focus {
@@ -305,7 +310,7 @@ img {
 .logout-button {
   padding: 0;
   min-width: 56px;
-  opacity: 0.3;
+  color: #b39e59;
 }
 
 .user-office-link {
@@ -408,7 +413,7 @@ img {
 }
 
 .has-submenu .submenu-list {
-  display: flex;
+  display: grid;
 }
 
 .has-submenu .menu-item-button::before {
@@ -418,9 +423,9 @@ img {
 
 .submenu-list {
   display: none;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 18px;
+  grid-template-columns: 222px 182px 182px;
+  grid-template-rows: repeat(3, 36px);
+  column-gap: 30px;
   position: absolute;
   top: 33px;
   left: -60px;
@@ -436,6 +441,10 @@ img {
   list-style: none;
   font-size: 16px;
   line-height: 18px;
+}
+
+.submenu-item-camera {
+  grid-column: 1/2;
 }
 
 .submenu-item-link {
@@ -473,7 +482,7 @@ img {
   background-color: transparent;
   cursor: pointer;
   opacity: 0.3;
-  z-index: 4;
+  z-index: 3;
 }
 
 .menu-item-button::before {
@@ -497,6 +506,14 @@ img {
   width: 2px;
   height: 16px;
   background-color: #000000;
+}
+
+.menu-item-button:hover {
+  opacity: 1;
+}
+
+.menu-item-button:focus {
+  outline: none;
 }
 
 .main-index {
@@ -526,6 +543,7 @@ img {
   gap: 40px;
   position: relative;
   list-style: none;
+  transition: all 0.7 ease-in-out;
 }
 
 .slider-item-active {
@@ -639,7 +657,7 @@ img {
   width: 100%;
   height: 8px;
   background-color: var(--yellow);
-  transition: 0.4s cubic-bezier(0.8,-0.5, 0.3, 1.7);
+  transition: 0.4s cubic-bezier(0.8, -0.5, 0.3, 1.7);
 }
 
 .link:hover::before {
@@ -745,6 +763,16 @@ img {
 
 .slider-pagination-item-active .slider-pagination-button {
   background-color: #000000;
+  cursor: default;
+}
+
+.slider-pagination-item-active .slider-pagination-button:hover,
+.slider-pagination-item-active .slider-pagination-button:active {
+  opacity: 1;
+}
+
+.slider-pagination-item-active .slider-pagination-button:focus {
+  outline: none;
 }
 
 .assortment {
@@ -1469,7 +1497,7 @@ img {
 }
 
 .social-link:hover::before {
-  background-color: rgba(255, 199, 0, 1);
+  background-color: #ffc700;
   animation: pulse 0.9s infinite;
 }
 
@@ -2227,19 +2255,20 @@ img {
   margin: auto;
   padding: 72px 80px;
   background-color: #ffffff;
-  border: 10px solid #000000;
+  outline: 10px solid #000000;
   box-shadow: 0 10px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .modal-close-button {
   position: absolute;
   content: "";
-  top: 84px;
-  right: 80px;
-  width: 26px;
-  height: 26px;
+  top: 77px;
+  right: 73px;
+  width: 40px;
+  height: 40px;
   background-image: url("../images/decor/modal-cross.svg");
   background-repeat: no-repeat;
+  background-position: center;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -2297,7 +2326,7 @@ img {
 }
 
 .field-error {
-  color: var(--red)
+  color: var(--red);
 }
 
 .modal-input {
