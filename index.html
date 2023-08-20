@@ -25,7 +25,7 @@
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="search-site">Поиск по сайту.</label>
             <input class="input search-input" type="text" id="search-site" name="search-site"
-              placeholder="Поиск по сайту">
+              placeholder="Поиск по сайту" autocomplete="off">
             <button class="button search-button" type="submit">Найти</button>
           </form>
           <ul class="menu-list">
@@ -74,7 +74,6 @@
             <ul class="nav-menu-list">
               <li class="nav-menu-item nav-menu-item-catalog">
                 <a class="menu-item-link menu-item-catalog-link" href="#">Каталог товаров</a>
-                <button class="menu-item-button" type="button"></button>
                 <ul class="submenu-list">
                   <li class="submenu-item">
                     <a class="submenu-item-link" href="#">Виртуальная реальность</a>
@@ -115,7 +114,7 @@
         <section class="slider">
           <div class="slider-container">
             <ol class="slider-list">
-              <li class="slider-item slider-item-copter slider-item-active">
+              <li class="slider-item slider-item-copter">
                 <h2 class="visually-hidden">Квадрокоптер.</h2>
                 <div class="image-wrapper">
                   <button class="slider-button previous-button" type="button">
@@ -155,7 +154,7 @@
                   </button>
                 </div>
                 <div class="slider-about">
-                  <h3 class="slider-title">Худеем правильно!</h3>
+                  <h3 class="title slider-title">Худеем<br>правильно!</h3>
                   <p class="slider-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать
                     занятия и соблюдать диету.</p>
                   <a class="link more-link" href="#">Подробнее</a>
@@ -179,7 +178,7 @@
                   </button>
                 </div>
                 <div class="slider-about">
-                  <h3 class="slider-title">Делай селфи, как Бен Стиллер!</h3>
+                  <h3 class="title slider-title">Делай селфи,<br>как Бен Стиллер!</h3>
                   <p class="slider-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь,
                     Карл!) метров длиной и весом всего 5 кг.
                   </p>
@@ -504,6 +503,7 @@
 
     <script src="./scripts/scipt-popover.js"></script>
     <script src="./scripts/script-catalog.js"></script>
+    <script src="./scripts/script-slider.js"></script>
     <script src="./scripts/script-modal.js"></script>
     <script src="./scripts/script-advatages.js"></script>
   </body>
