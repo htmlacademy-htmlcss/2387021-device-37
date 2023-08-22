@@ -1,11 +1,17 @@
 const sliderList = document.querySelector('.slider-list'),
-      previousButtons = document.querySelectorAll('.previous-button'),
-      nextButtons = document.querySelectorAll('.next-button'),
-      dots = document.querySelectorAll('.slider-pagination-item');
+  previousButtons = document.querySelectorAll('.previous-button'),
+  nextButtons = document.querySelectorAll('.next-button'),
+  dots = document.querySelectorAll('.slider-pagination-item');
 
 let position = 0,
-    dotIndex = 0;
+  dotIndex = 0;
 
+const thisSlide = (index) => {
+  for (dot of dots) {
+    dot.classList.remove('slider-pagination-item-active')
+  }
+  dots[index].classList.add('slider-pagination-item-active')
+}
 
 for (nextButton of nextButtons) {
   nextButton.addEventListener('click', function () {
@@ -31,13 +37,6 @@ for (previousButton of previousButtons) {
     sliderList.style.left = -position + 'px';
     thisSlide(dotIndex);
   })
-}
-
-const thisSlide = (index) => {
-  for (let dot of dots) {
-    dot.classList.remove('slider-pagination-item-active')
-  }
-  dots[index].classList.add('slider-pagination-item-active')
 }
 
 dots.forEach((dot, index) => {
