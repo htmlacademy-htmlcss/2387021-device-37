@@ -11,7 +11,6 @@ let list = document.querySelector('.popover-cart-list');
 let items = document.querySelectorAll('.popover-cart-item');
 let cart = document.querySelector('.cart-counter');
 
-
 let product = document.querySelector('.popover-product-amount');
 let sum = document.querySelector('.popover-sum-amount');
 
@@ -29,7 +28,7 @@ deleteButtons[1].onclick = function () {
   sum.textContent -= 1000;
 }
 
-if (product < 1) {
-  product.textContent = 'Корзина пуста';
-  sum.textContent = '';
-}
+// if (product < 1) {
+//   product.textContent = 'Корзина пуста';
+//   sum.textContent = '';
+// }

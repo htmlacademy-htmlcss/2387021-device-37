@@ -26,13 +26,11 @@ plusButton.onclick = function() {
   quantityInput.value++;
 };
 
+// let input = document.querySelector('.email-input');
+// let help = document.querySelector('.field-help')
 
-
-let input = document.querySelector('.email-input');
-let help = document.querySelector('.field-help')
-
-if (input.invalid = true) {
-  help.classList.add('field-error');
-} else {
-  help.classList.remove('field-error');
-}
+// if (input.invalid = true) {
+//   help.classList.add('field-error');
+// } else {
+//   help.classList.remove('field-error');
+// }

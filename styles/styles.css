@@ -153,6 +153,7 @@ img {
 
 .search-input:focus {
   outline: 2px solid var(--purple);
+  outline-offset: 2px;
 }
 
 .search-input:disabled {
@@ -190,12 +191,11 @@ img {
 
 .search-button {
   width: 160px;
-  height: 40px;
+  min-height: 40px;
   border: 2px solid #000000;
   border-left: 0;
   border-radius: 0 50px 50px 0;
   background-color: transparent;
-  padding: 0;
   transition: 0.3s ease;
   z-index: 3;
 }
@@ -207,6 +207,7 @@ img {
 
 .search-button:focus {
   outline: 2px solid var(--purple);
+  outline-offset: 2px;
 }
 
 .search-button:active {
@@ -225,7 +226,6 @@ img {
 
 .menu-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   margin: 0;
@@ -389,7 +389,7 @@ img {
 
 .nav-menu-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -420,7 +420,7 @@ img {
   height: 1px;
 }
 
-.nav-menu-item:not(:first-child):not(:last-child) {
+.nav-menu-item:not(:last-child) {
   margin-right: 45px;
 }
 
@@ -428,7 +428,7 @@ img {
   margin-right: -3px;
 }
 
-.nav-menu-item-catalog {
+.nav-menu-item.nav-menu-item-catalog {
   position: relative;
   margin-right: auto;
   z-index: 3;
@@ -939,7 +939,7 @@ img {
 
 .advantages-description-item-active {
   display: block;
-  animation: line-advantages 0.4s cubic-bezier(0.2,-0.7, 0.6, 1.5);
+  animation: line-advantages 0.4s cubic-bezier(0.2, -0.7, 0.6, 1.5);
 }
 
 @keyframes line-advantages {
@@ -1024,6 +1024,7 @@ img {
 
 .rare-commodity-button::before {
   position: absolute;
+  content: "";
   top: 50%;
   transform: translateY(-50%);
   left: 0;
@@ -1033,7 +1034,6 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--yellow);
-  content: "";
 }
 
 .rare-commodity-button::after {
@@ -1349,8 +1349,8 @@ img {
 }
 
 .subscribe-free::before {
-  content: "";
   position: absolute;
+  content: "";
   top: 50%;
   left: -32px;
   transform: translateY(-50%);
@@ -1566,7 +1566,7 @@ img {
   outline: none;
 }
 
-/*catalog*/
+/*Каталог*/
 .catalog-header {
   min-height: 232px;
 }
@@ -1896,7 +1896,6 @@ img {
   border: none;
   color: #000000;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background-image: url("../images/decor/select-arrow.svg");
   background-repeat: no-repeat;
@@ -2271,6 +2270,7 @@ img {
 }
 
 .modal-title {
+  width: 720px;
   margin-bottom: 42px;
 }
 

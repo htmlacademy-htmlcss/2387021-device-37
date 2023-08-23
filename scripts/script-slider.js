@@ -7,13 +7,13 @@ let position = 0,
   dotIndex = 0;
 
 const thisSlide = (index) => {
-  for (dot of dots) {
+  for (let dot of dots) {
     dot.classList.remove('slider-pagination-item-active')
   }
   dots[index].classList.add('slider-pagination-item-active')
 }
 
-for (nextButton of nextButtons) {
+for (let nextButton of nextButtons) {
   nextButton.addEventListener('click', function () {
     position += 1160;
     dotIndex++;
@@ -26,7 +26,7 @@ for (nextButton of nextButtons) {
   })
 };
 
-for (previousButton of previousButtons) {
+for (let previousButton of previousButtons) {
   previousButton.addEventListener('click', function () {
     position -= 1160;
     dotIndex--;
