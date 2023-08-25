@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Academy: Девайс - Каталог</title>
+    <title>Девайс - Каталог</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
     <link rel="stylesheet" href="./styles/styles.css">
   </head>
-
   <body>
     <div class="main-container">
       <header class="main-header catalog-header" id="main-header">
@@ -63,8 +61,7 @@
                     </li>
                   </ul>
                   <div class="popover-total">
-                    <p class="popover-text popover-product">Товаров:<span class="popover-text popover-product-amount"> 2</span>
-                    </p>
+                    <p class="popover-text popover-product">Товаров:<span class="popover-text popover-product-amount"> 2</span></p>
                     <p class="popover-text popover-sum">Сумма:<span class="popover-text popover-sum-amount"> 2000 </span>₽</p>
                   </div>
                   <a class="button button-open-cart" href="#">Открыть корзину</a>
@@ -110,7 +107,6 @@
           </nav>
         </div>
       </header>
-
       <main class="main-catalog main-container">
         <header class="inner-header">
           <div class="inner-header-container">
@@ -128,7 +124,6 @@
             </ol>
           </div>
         </header>
-
         <section class="catalog-products">
           <div class="catalog-products-container">
             <div class="catalog-filter">
@@ -141,10 +136,10 @@
                     <div class="range-bar" style="left: 0; width: 119px;">
                       <button class="range-toggle toggle-min" type="button"></button>
                       <label class="visually-hidden">Изменить минимальную цену.</label>
-                      <input class="cost-value cost-min" type="text" placeholder="от 0" name="cost-min">
+                      <input class="cost-value cost-min" type="number" placeholder="от 0" name="cost-min" min="0">
                       <button class="range-toggle toggle-max" type="button"></button>
                       <label class="visually-hidden">Изменить максимальную цену.</label>
-                      <input class="cost-value cost-max" type="text" placeholder="до 5000" name="cost-max">
+                      <input class="cost-value cost-max" type="number" placeholder="до 5000" name="cost-max">
                     </div>
                   </div>
                 </fieldset>
@@ -264,7 +259,6 @@
                 </li>
               </ul>
               <a class="button button-download" href="#">Загрузить еще</a>
-
               <ol class="pagination-list">
                 <li class="pagination-item pagination-item-back">
                   <button class="pagination-button pagination-back-button" type="button" disabled>Назад</button>
@@ -292,7 +286,6 @@
           </div>
         </section>
       </main>
-
       <footer class="main-footer">
         <div class="footer-container">
           <a class="footer-logo" href="#main-header">
@@ -392,5 +385,4 @@
     <script src="./scripts/script-catalog.js"></script>
     <script src="./scripts/scipt-popover.js"></script>
   </body>
-
 </html>
