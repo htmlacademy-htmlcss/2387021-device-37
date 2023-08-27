@@ -23,7 +23,8 @@
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="search-site">Поиск по сайту.</label>
             <input class="input search-input" type="text" id="search-site" name="search-site"
-              placeholder="Поиск по сайту">
+              placeholder="Поиск по сайту" autocomplete="off">
+              <span class="search-input-wrapper"></span>
             <button class="button search-button" type="submit">Найти</button>
           </form>
           <ul class="menu-list">
@@ -214,10 +215,10 @@
                   <option value="expensive">Сначала дорогие</option>
                 </select>
                 <a class="sort-button up-button" href="#">
-                  <span class="visually-hidden">По возрастанию</span>
+                  <span class="visually-hidden">По возрастанию.</span>
                 </a>
                 <a class="sort-button down-button" href="#">
-                  <span class="visually-hidden">По убыванию</span>
+                  <span class="visually-hidden">По убыванию.</span>
                 </a>
               </div>
               <ul class="catalog-list">
